@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">BMI &amp; BMR Calculator </string>
+    <string name="body_mass_index">Body Mass Index</string>
+    <string name="basal_metabolic_rate">Basal Metabolic Rate</string>
+    <string name="what_do_you_want_to_calculate">What do you want to calculate?</string>
+    <string name="contact_us">Contact us</string>
+    <string name="rate_this_app">Rate this app</string>
+    <string name="body_mass_index_or_bmi_is_a_way_to_help_you_figure_out_if_you_are_at_a_healthy_weight_for_your_height_bmi_is_a_number_based_on_your_weight_and_height_in_general_the_higher_the_number_the_more_body_fat_a_person_has">Body mass index, or BMI, is a way to help you figure out if you are at a healthy weight for your height. In general, the higher the number, the more body fat a person has.
+</string>
+    <string name="bmi">BMI</string>
+    <string name="complete_information">Complete Information</string>
+    <string name="female">Female</string>
+    <string name="age">AGE:</string>
+    <string name="please_enter_your_age">Please enter your age…</string>
+    <string name="height">HEIGHT:</string>
+    <string name="ft">FT</string>
+    <string name="in">IN</string>
+    <string name="weight">WEIGHT:</string>
+    <string name="lb">LB</string>
+    <string name="reset1">Reset</string>
+    <string name="calculate1">Calculate</string>
+    <string name="by_aiham">By Aiham</string>
+    <string name="results">Results</string>
+    <string name="the_basal_metabolic_rate_estimates_the_amount_of_energy_a_person_s_body_needs_to_carry_out_basic_functions_like_breathing_circulation_and_cell_production">The Basal Metabolic Rate estimates the amount of energy a person\'s body needs to carry out basic functions like breathing, circulation and cell production.</string>
+    <string name="calories">Calories</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="male">Male</string>
+    <string name="male_picture">male picture</string>
+    <string name="female_picture">female_picture</string>
+</resources>

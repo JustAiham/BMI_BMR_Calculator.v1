@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".BMRActivity">
+
+
+    <TextView
+        android:id="@+id/completeInfoP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/complete_information"
+        android:textSize="20sp"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gender_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/completeInfoP"
+        tools:layout_editor_absoluteY="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_male"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            tools:layout_editor_absoluteY="16dp">
+
+            <GridLayout
+                android:id="@+id/gridlayout_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:columnCount="1"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/male_picture"
+                    android:maxWidth="102dp"
+                    android:maxHeight="102dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/boy" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/male"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toEndOf="@+id/cardview_male"
+            tools:layout_editor_absoluteY="16dp">
+
+            <GridLayout
+                android:id="@+id/gridlayout_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:columnCount="1"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/female_picture"
+                    android:maxWidth="102dp"
+                    android:maxHeight="102dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/girl" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/female"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+    <TextView
+        android:id="@+id/age_tiP"
+        style="@style/Theme.AppCompat.DayNight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/age"
+        android:textSize="20sp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender_grid" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/please_enter_your_age"
+        android:padding="10dp"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toTopOf="@id/age_tiP">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiEditText_age"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/heightP"
+        style="@style/Theme.AppCompat.DayNight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/height"
+        android:textSize="20sp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout" />
+
+    <GridLayout
+        android:id="@+id/height_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="2"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightP">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_inPFT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:hint="@string/ft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heightP">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiEditText_height_feet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_inPIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:hint="@string/in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ti_inPFT"
+            app:layout_constraintTop_toBottomOf="@id/heightP">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiEditText_height_inches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </GridLayout>
+
+
+    <TextView
+        android:id="@+id/weight_textP"
+        style="@style/Theme.AppCompat.DayNight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/weight"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height_grid" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weight_tilayoutP"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:hint="@string/lb"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/weight_textP"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiEditText_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <GridLayout
+        android:id="@+id/bmr_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_tilayoutP">
+
+        <Button
+            android:id="@+id/button_calculate"
+            style="@style/Theme.AppCompat.DayNight"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/medium"
+            android:shadowColor="@color/black"
+            android:text="@string/calculate"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_reset"
+            style="@style/Theme.AppCompat.DayNight"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/medium"
+            android:shadowColor="@color/black"
+            android:text="@string/reset"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

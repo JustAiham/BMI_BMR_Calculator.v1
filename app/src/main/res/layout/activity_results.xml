@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resultsActivity"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:padding="30dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/result_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="monospace"
+                android:text="@string/results"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/finalResultsMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/result_title"
+                android:fontFamily="@font/medium"
+                android:layout_centerHorizontal="true"
+                android:text="@string/calories"
+                android:textColor="@color/black"/>
+
+
+            <ImageView
+                android:layout_below="@id/finalResultsMessage"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/_05_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageview_bmrImage"
+                />
+            <TextView
+                android:layout_below="@id/imageview_bmrImage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/definition_BMR"
+                android:fontFamily="monospace"
+                android:textColor="@color/black"
+                android:text="@string/the_basal_metabolic_rate_estimates_the_amount_of_energy_a_person_s_body_needs_to_carry_out_basic_functions_like_breathing_circulation_and_cell_production"
+                android:textSize="15sp"
+                />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

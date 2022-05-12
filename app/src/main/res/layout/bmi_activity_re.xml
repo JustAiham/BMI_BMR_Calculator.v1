@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMIActivity"
+    >
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="1">
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:fontFamily="monospace"
+            android:text="Complete Information"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:layout_gravity="center"
+            android:useDefaultMargins="true"
+            >
+            <TextView
+                style="@style/Theme.AppCompat.DayNight"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/medium"
+                android:text="WEIGHT:"
+                android:textSize="20sp"
+
+                />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="lb">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiEditText_bmi_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:layout_gravity="center"
+            android:useDefaultMargins="true"
+            >
+            <TextView
+                style="@style/Theme.AppCompat.DayNight"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/medium"
+                android:text="HEIGHT:"
+                android:textSize="20sp"
+
+                />
+
+            <GridLayout
+                android:columnCount="2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:hint="FT">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiEditText_bmi_heightft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="15dp"
+                    android:hint="IN">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiEditText_bmi_heightinc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </GridLayout>
+
+        </GridLayout>
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/button_calculate_bmi"
+            style="@style/Theme.AppCompat.DayNight"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/medium"
+            android:shadowColor="@color/black"
+            android:text="@string/calculate"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_reset_bmi"
+            style="@style/Theme.AppCompat.DayNight"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/medium"
+            android:shadowColor="@color/black"
+            android:text="@string/reset"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </GridLayout>
+
+
+</LinearLayout>
